@@ -1,19 +1,19 @@
 <template lang="pug">
-    div.header
-        div(@click="burgerActive = !burgerActive").burger-menu
-          span
-          span
-          span
-        div.header-mobile(:class="{'active' : burgerActive}")
-          ul.header-link.px-0
-            li
-              router-link(to="/admin/index" exact) Главная
-            li
-              router-link(to="/admin/create-product" exact) Создать Продукт
-            li
-              router-link(to="/admin/all-products") Все Продукты
-            li
-              router-link(to="/admin/categories") Категория
+div.header
+		div(@click="burgerActive = !burgerActive").burger-menu
+			span
+			span
+			span
+		div.header-mobile(:class="{'active' : burgerActive}")
+			ul.header-link.px-0
+				li
+					router-link(to="/admin/index" exact) Главная
+				li
+					router-link(to="/admin/create-product" exact) Создать Продукт
+				li
+					router-link(to="/admin/all-products") Все Продукты
+				li
+					router-link(to="/admin/categories") Категория
 </template>
 
 <script>

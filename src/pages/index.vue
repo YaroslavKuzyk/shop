@@ -1,9 +1,12 @@
 <template lang="pug">
-  div asdas
+div 
+  CategoriesCard
 </template>
 
 <script>
+import CatigoriesCard from "@/components/Categories/CategoriesCard";
 export default {
-  name: 'IndexPage',
-}
+  name: "IndexPage",
+  components: { CatigoriesCard },
+};
 </script>

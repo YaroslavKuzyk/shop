@@ -1,14 +1,17 @@
 <template lang="pug">
   v-app
     v-main
-      v-container(fluid).px-0.py-0
+      v-container
+        MainHeader
         router-view
 </template>
 
 <script>
 
+import MainHeader from "@/components/Header";
 export default {
   name: 'App',
+  components: {MainHeader},
   data: () => ({
   }),
 };

@@ -2,7 +2,7 @@
   div.product-popualr
     .product-popular__title Популярные товары
     div.product-popualr__filter
-      button(v-for="filter in filters" :class="{'active' : filterActive == filter.value}"  @click="productFilter(filter.value)") {{ filter.name }}
+      button(v-for="filter in filters" :class="{'active' : filterActive === filter.value}"  @click="productFilter(filter.value)") {{ filter.name }}
     VueSlickCarousel(v-if="itemOnFilter.length" v-bind="settings" :slidesToShow="slidesToShow")
       div(v-for="(item, index) in  itemOnFilter").product-popular-wrapper
         ProductCard(v-if="item" :item="item" :key="index")
@@ -113,6 +113,10 @@ export default {
 </script>
 
 <style lang="scss">
+  .product-popular-wrapper {
+    display: flex!important;
+    justify-content: center;
+  }
   .product-popualr__empty{
     height: 380px;
     display: flex;
@@ -124,6 +128,7 @@ export default {
   }
 
   .product-popular__title {
+    padding-left: 23px;
     font-weight: 700;
     font-size: 25px;
     line-height: 30px;
@@ -132,6 +137,7 @@ export default {
   }
 
   .product-popualr__filter {
+    padding-left: 23px;
     display: flex;
     margin-bottom: 35px;
 

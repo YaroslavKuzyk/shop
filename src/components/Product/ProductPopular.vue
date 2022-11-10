@@ -1,12 +1,12 @@
 <template lang="pug">
   div.product-popualr
-    .product-popular__title Популярные товары 
+    .product-popular__title Популярные товары
     div.product-popualr__filter
       button(v-for="filter in filters" :class="{'active' : filterActive == filter.value}"  @click="productFilter(filter.value)") {{ filter.name }}
     VueSlickCarousel(v-if="itemOnFilter.length" v-bind="settings" :slidesToShow="slidesToShow")
       div(v-for="(item, index) in  itemOnFilter").product-popular-wrapper
         ProductCard(v-if="item" :item="item" :key="index")
-    div(v-else).product-popualr__empty Извините! </br> Данных товаров в наличии нет!
+    div(v-else).product-popular__empty Извините! </br> Данных товаров в наличии нет!
 </template>
 
 <script>
@@ -23,6 +23,21 @@ export default {
       settings: {
         arrows: true,
         dots: true,
+        responsive: [
+          {
+            breakpoint: 1201,
+            settings: {
+              arrows: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              arrows: false,
+              dots: false,
+            },
+          },
+        ],
       },
       items: [
         {

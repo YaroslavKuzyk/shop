@@ -3,14 +3,16 @@
     v-main
       MainHeader
       router-view
+      MainFooter
 </template>
 
 <script>
 
 import MainHeader from "@/components/Header";
+import MainFooter from "@/components/Footer";
 export default {
   name: 'App',
-  components: {MainHeader},
+  components: {MainFooter, MainHeader},
   data: () => ({
   }),
 };

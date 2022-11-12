@@ -1,14 +1,14 @@
 <template lang="pug">
 div 
-  CatigoriesCard
+  SearchProduct
   ProductPopular
 </template>
 
 <script>
-import CatigoriesCard from "@/components/Categories/CatigoriesCard";
 import ProductPopular from "@/components/Product/ProductPopular";
+import SearchProduct from "@/components/SearchProduct";
 export default {
   name: "IndexPage",
-  components: {ProductPopular, CatigoriesCard},
+  components: {SearchProduct, ProductPopular},
 };
 </script>

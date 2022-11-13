@@ -7,9 +7,11 @@ div.header
 		div.header-mobile(:class="{'active' : burgerActive}")
 			ul.header-link.px-0
 				li
-					router-link(to="/admin/index" exact) Главная
+					router-link(to="/") Вернуться На Сайт
 				li
-					router-link(to="/admin/create-product" exact) Создать Продукт
+					router-link(to="/admin/index") Главная
+				li
+					router-link(to="/admin/create-product") Создать Продукт
 				li
 					router-link(to="/admin/all-products") Все Продукты
 				li
@@ -22,9 +24,9 @@ export default {
   data() {
     return {
       burgerActive: false,
-    }
-  }
-}
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -70,14 +72,12 @@ export default {
   }
 
   &-link {
-     list-style: none;
-     display: flex;
-     justify-content: space-between;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
 
     @media (max-width: 600px) {
-
       flex-direction: column;
-
 
       li {
         margin-bottom: 16px;
@@ -93,12 +93,12 @@ export default {
       text-decoration: none;
 
       &:hover {
-         color: #1976d2;
-       }
+        color: #1976d2;
+      }
     }
   }
 }
-.router-link-active {
+.router-link-exact-active {
   color: #1976d2 !important;
 }
 </style>

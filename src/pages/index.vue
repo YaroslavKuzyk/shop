@@ -1,5 +1,6 @@
 <template lang="pug">
 div 
+  IntroCarousel
   ProductPopular
   div.category-wrap
     CategoryesCard(v-for="(item, index) in  items" :item="item" :key="index")
@@ -8,9 +9,10 @@ div
 <script>
 import CategoryesCard from "@/components/Categories/CategoryesCard";
 import ProductPopular from "@/components/Product/ProductPopular";
+import IntroCarousel from "@/components/Intro/IntroCarousel";
 export default {
   name: "IndexPage",
-  components: { ProductPopular, CategoryesCard },
+  components: { ProductPopular, CategoryesCard, IntroCarousel },
   data() {
     return {
       items: [

@@ -40,7 +40,7 @@ export default {
     text-decoration: none;
   }
 }
-.catigori {
+.category {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -1,7 +1,7 @@
 <template lang="pug">
 div.carousel-intro-wrap
-  VueSlickCarousel(v-if="itemOnFilter.length" v-bind="settings" :slidesToShow="slidesToShow")
-          img(src="@/assets/img/intro/intro.jpg") 
+  VueSlickCarousel(v-if="itemOnFilter.length" v-bind="settings")
+          img(src="@/assets/img/intro/intro.jpg", :slidesToShow="slidesToShow") 
         
 </template>
 <script>
@@ -17,7 +17,6 @@ export default {
         arrows: true,
         dots: true,
       },
-      itemOnFilter: [],
     };
   },
   computed: {
@@ -29,8 +28,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .carousel-intro-wrap {
-  max-width: 1170px;
-  margin: 0 auto;
   .slick-slider {
     .slick-arrow {
       width: 15px;

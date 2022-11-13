@@ -3,16 +3,16 @@ div
   IntroCarousel
   ProductPopular
   div.category-wrap
-    CategoryesCard(v-for="(item, index) in  items" :item="item" :key="index")
+    CategoryCard(v-for="(item, index) in  items" :item="item" :key="index").category-card-wrap
 </template>
 
 <script>
-import CategoryesCard from "@/components/Categories/CategoryesCard";
+import CategoryCard from "@/components/Categories/CategoryCard";
 import ProductPopular from "@/components/Product/ProductPopular";
 import IntroCarousel from "@/components/Intro/IntroCarousel";
 export default {
   name: "IndexPage",
-  components: { ProductPopular, CategoryesCard, IntroCarousel },
+  components: { ProductPopular, CategoryCard, IntroCarousel },
   data() {
     return {
       items: [
@@ -64,5 +64,8 @@ export default {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
+}
+.category-card-wrap {
+  margin: 20px;
 }
 </style>

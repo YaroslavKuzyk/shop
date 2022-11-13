@@ -2,15 +2,15 @@
 div
   div.category-card
     div.category
-      a(class='button', href='#').category-name {{ item.name }}
+      a(  :href="item.href").category-name {{ item.name }}
       div.category-links 
-        a(class='button2', href='#').category-link Подробнее
+        a(  :href="item.href").category-link Подробнее
         img(src="@/assets/img/category/Back.svg").category-links__img  
     img(src="@/assets/img/category/categori-logo.png").category-card__img  
 </template>
 <script>
 export default {
-  name: "CategoryesCard",
+  name: "CategoryCard",
   props: {
     item: {
       type: Object,
@@ -23,10 +23,8 @@ export default {
 .category-card {
   display: flex;
   justify-content: space-between;
-  height: 135px;
   width: 330px;
   border: 3px solid #cdcdcd;
-  margin: 20px;
   max-width: 1170px;
   padding: 15px;
   transition: all 0.9s;
